@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#8B1E3F;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+    position: relative;
+}
+
+header h1 img{
+    width:75px;
+    height: 35px;
+    vertical-align:middle;
+    margin-right:100px;
+    margin-left:-20px;
+}
+
+.flag{
+    width:40px;
+    margin-right:10px;
+    display:inline-block;
+    transform-origin:left center;
+    animation:wave 2s ease-in-out infinite;
+}
+
+@keyframes wave{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    25%{
+        transform:rotate(5deg);
+    }
+
+    50%{
+        transform:rotate(0deg);
+    }
+
+    75%{
+        transform:rotate(-5deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
+
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+/* Main */
+
+.course{
+
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+
+}
+
+.course h2{
+
+    margin-bottom:30px;
+
+}
+
+/* Cards */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+text-decoration:none;
+
+color:#333;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+color:#8B1E3F;
+
+}
+
+.locked{
+
+opacity:.5;
+
+cursor:not-allowed;
+
+
+}
+
+/* ===========================
+        THEME BUTTON
+=========================== */
+
+#theme-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    padding:10px 20px;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:white;
+    color:#8B1E3F;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#theme-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ===========================
+         DARK MODE
+=========================== */
+
+body.dark{
+
+    background:#1f1f1f;
+    color:white;
+
+}
+
+body.dark .card{
+
+    background:#2d2d2d;
+    color:white;
+
+}
+
+body.dark .card h3{
+
+    color:#ffb4c6;
+
+}
+
+body.dark header{
+
+    background:#4d1024;
+
+}
+
+.nav-btn{
+
+    background:#8B1E3F;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+/* ===========================
+      LESSON NAVIGATION
+=========================== */
+
+.lesson-nav{
+
+    position:fixed;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#ffffff;
+
+    border-top:1px solid #ddd;
+
+    box-sizing:border-box;
+
+    z-index:1000;
+
+}
+
+.prev-btn{
+
+    justify-self:start;
+
+}
+
+.home-btn{
+
+    justify-self:center;
+
+}
+
+.next-btn{
+
+    justify-self:end;
+
+}
+
+.nav-btn{
+
+    display:inline-block;
+
+    background:#8B1E3F;
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-btn:hover{
+
+    background:#6f1732;
+
+}
+
+main{
+
+    padding-bottom:100px;
+
+}
+
+/* ===========================
+        LESSON CONTENT
+=========================== */
+
+.lesson{
+
+    width:90%;
+    max-width:850px;
+
+    margin:80px auto;
+
+    padding:0 25px;
+
+}
+
+.lesson-section{
+
+    margin-bottom:90px;
+
+}
+
+.lesson-section h2{
+
+    font-size:2rem;
+
+    color:#8B1E3F;
+
+    margin-bottom:45px;
+
+}
+
+.lesson-section p{
+
+    font-size:1.15rem;
+
+    line-height:2.;
+
+    margin-bottom:40px;
+
+    text-align:justify;
+
+}
+
+/* Lists */
+
+.lesson-section ul{
+
+    padding-left:25px;
+
+}
+
+.lesson-section li{
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .lesson{
+
+        width:95%;
+
+        padding:0 15px;
+
+    }
+
+    .lesson-section h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .lesson-section p{
+
+        font-size:1rem;
+        line-height:1.9;
+        text-align:left;
+
+    }
+
+}
+
+#theme-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:70px;
+    height:36px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    padding:3px;
+
+    transition:.35s;
+
+}
+
+.thumb{
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#8B1E3F;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+body.dark #theme-btn{
+
+    background:#444;
+
+}
+
+body.dark .thumb{
+
+    transform:translateX(34px);
+
+}
+
+h1 img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.audio-btn{
+
+    position:fixed;
+
+    right:25px;
+    bottom:90px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    background:#8B1E3F;
+    color:#fff;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+    transition:all .3s ease;
+
+    z-index:999;
+
+}
+
+.audio-btn:hover{
+
+    background:#6f1732;
+
+    transform:scale(1.05);
+
+}
+
+.audio-btn.change{
+
+    transform:scale(.95);
+
+    opacity:.7;
+
+}
+
+body.dark .audio-btn{
+
+    background:#ffb4c6;
+
+    color:#222;
+
+}
+
+/* ===========================
+      READING HIGHLIGHT
+=========================== */
+
+.lesson-section p{
+
+    transition:.35s;
+
+}
+
+.lesson-section p.active{
+
+    background:#fff3b0;
+
+    border-left:5px solid #8B1E3F;
+
+    padding:15px 20px;
+
+    border-radius:10px;
+
+    transform:translateX(8px);
+
+}
+
+body.dark .lesson-section p.active{
+
+    background:#5a2740;
+
+    border-left:5px solid #ffb4c6;
+
+}
